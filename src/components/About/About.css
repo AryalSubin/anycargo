@@ -1,0 +1,13 @@
+#hoverEl:hover{
+    
+    /* background-image: url("warehousing.jpg"); */
+
+    height:300px ;
+    width: 400px;
+    background-color: cadetblue;
+    
+    
+}
+*{
+    box-sizing: border-box;
+}

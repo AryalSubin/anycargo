@@ -9,6 +9,7 @@ import Landing from "./components/Landing/Landing";
 import About from "./components/About/About";
 import OurServices from "./components/OurServices/OurServices";
 import ContactUs from "./components/ContactUs/ContactUs";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const comp = useRef(null);
@@ -21,13 +22,14 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="font-poppins">
       <Navbar />
       <Landing />
       <About />
       <OurServices />
       <ContactUs />
-    </>
+      <Footer/>
+    </div>
   );
 }
 

@@ -1,26 +1,53 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import logo from "../../assets/logo1.png";
+import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
   const comp = useRef(null);
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const t1 = gsap.timeline();
-      t1.from(["#logo", "#litems", "#search", "#btn"], {
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     const t1 = gsap.timeline();
+  //     t1.from(["#logo", "#litems", "#search", "#btn"], {
+  //       opacity: 0,
+  //       duration: 0.5,
+  //       delay: 0.2,
+  //       stagger: 0.1,
+  //       ease: "back.inOut",
+  //     });
+  //   }, comp);
+
+  //   return () => ctx.revert();
+  // }, []);
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+      tl.from(["#logo", "#litems", "#search", "#btn"], {
         opacity: 0,
+        x: 200,
         duration: 0.5,
         delay: 0.2,
         stagger: 0.1,
         ease: "back.inOut",
       });
-    }, comp);
-
-    return () => ctx.revert();
-  }, []);
+      // tl.from("#nav", {
+      //   y: -100,
+      //   opacity: 0,
+      // });
+      // .from(["#logo", "#litems", "#search", "#btn"], {
+      //   x: -100,
+      //   opacity: 0,
+      //   delay: 0.3,
+      //   stagger: 0.1,
+      //   ease: "expo.inOut",
+      // });
+    },
+    { scope: comp }
+  );
 
   return (
-    <div ref={comp} className="flex py-2 px-[7vw]">
+    <div ref={comp} className=" flex py-2 px-[7vw] bg-gray-200">
+      {/* <div id="nav"> */}
       <div id="logo" className="flex object-cover p-2 overflow-hidden ">
         <img className="h-[50px]" src={logo} alt="logo" />
       </div>
@@ -47,6 +74,7 @@ const Navbar = () => {
           WhatsApp Now
         </div>
       </div>
+      {/* </div> */}
     </div>
   );
 };

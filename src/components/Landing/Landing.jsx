@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
+
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import img1 from "../../assets/landing/ship1.jpg";
 import img2 from "../../assets/landing/ship2.jpg";
 import img3 from "../../assets/landing/plane.jpg";
@@ -7,21 +9,56 @@ import img4 from "../../assets/landing/luz.png";
 
 const Landing = () => {
   const comp = useRef(null);
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     const t1 = gsap.timeline();
+  //     t1.from(
+  //       ["#acc", "#span1", "#span2", "#span3", "#para", "#more", "#spin-img"],
+  //       {
+  //         x: -5,
+  //         opacity: 0,
+
+  //         delay: 0.3,
+  //         stagger: 0.1,
+  //         ease: "expo.inOut",
+  //       }
+  //     )
+
+  //       .from(["#first-img", "#second-img", "#third-img"], {
+  //         opacity: 0,
+  //         scale: 0.8,
+  //         stagger: 1,
+  //       })
+  //       .from(["#rotate-arrow"], {
+  //         opacity: 0,
+  //         duration: 0.5,
+  //         rotate: 60,
+  //       })
+  //       .from(["#service-text"], {
+  //         opacity: 0,
+  //         duration: 0.8,
+  //         scale: 0.8,
+  //         ease: "expo.inOut",
+  //       });
+  //   }, comp);
+
+  //   return () => ctx.revert();
+  // }, []);
+
+  const container = useRef();
+  useGSAP(
+    () => {
       const t1 = gsap.timeline();
       t1.from(
         ["#acc", "#span1", "#span2", "#span3", "#para", "#more", "#spin-img"],
         {
           x: -5,
           opacity: 0,
-
           delay: 0.3,
           stagger: 0.1,
           ease: "expo.inOut",
         }
       )
-
         .from(["#first-img", "#second-img", "#third-img"], {
           opacity: 0,
           scale: 0.8,
@@ -38,13 +75,13 @@ const Landing = () => {
           scale: 0.8,
           ease: "expo.inOut",
         });
-    }, comp);
+    },
+    { scope: comp }
+  );
 
-    return () => ctx.revert();
-  }, []);
   return (
-    <div ref={comp} className=" h-[90vh] px-[7vw] pt-[5vh] flex ">
-      <div className="flex relative flex-col flex-1">
+    <div ref={comp} className=" h-[100vh] px-[7vw] pt-[5vh] flex ">
+      <div className="flex lala relative flex-col flex-1">
         <div id="acc" className="flex py-4">
           <span className="px-4 py-2 max-w-fit rounded-full flex items-center bg-gray-200 text-gray-700">
             Accelerated Solutions

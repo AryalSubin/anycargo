@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import warehouse from "../../assets/about/warehousing.jpg";
+import "./About.css";
+
 const About = () => {
+  const [hover1, sethover1] = useState(false);
+  const [hover2, sethover2] = useState(false);
+  const [hover3, sethover3] = useState(false);
+  const [hover4, sethover4] = useState(false);
+
   return (
-    <div className="h-[100vh] w-full bg-white">
-      <div className="p-12">
-        <p className="text-center text-xl font-bold px-[20vw]">
-          🛄 SAY GOODBYE TO EXCESS BAGGAGE WORRIES 🛄 <br />
+    <div className=" relative w-full h-screen flex flex-col  py-20  bg-white">
+      <div className="p-12 ">
+        <h1 className="text-center text-4xl my-8 font-bold ">About Us</h1>
+        <p className="text-center text-xl  px-[20vw]">
+          SAY GOODBYE TO EXCESS BAGGAGE WORRIES <br />
           We've got you covered with our efficient courier service. Ship your
-          extra luggage hassle-free and travel light!✈ ✨{" "}
+          extra luggage hassle-free and travel light!{" "}
         </p>
       </div>
       {/* boxes  */}
-      <div className="w-full flex items-end justify-between px-20">
+
+      {/* <div className="w-full flex items-end justify-between px-20">
         {aboutData.map((item) => {
           return item.id === 3 ? (
             <div
@@ -107,6 +116,208 @@ const About = () => {
             </div>
           );
         })}
+      </div> */}
+      <div className="flex absolute bottom-20 w-full  px-20 justify-center flex-wrap gap-4 items-end ">
+        <div
+          onMouseEnter={() => {
+            sethover1(true);
+          }}
+          onMouseLeave={() => {
+            sethover1(false);
+          }}
+          id="hoverEl"
+          className="  flex flex-col group  gap-2 p-3 w-[250px] h-[200px] border border-gray-500 transition-all duration-300 ease-linear rounded-3xl  "
+        >
+          <div className=" border rounded-full  max-w-fit  group-hover:border-gray-100 border-gray-700">
+            <svg
+              className="p-2 "
+              fill={`${!hover1 ? "#000000" : "#ffffff"}`}
+              width="64px"
+              height="64px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <title></title>{" "}
+                <g id="mission">
+                  {" "}
+                  <path d="M21.85,21.15l-7-7a.48.48,0,0,0-.7,0L12.5,15.79,8,11.29V9h3v1a.5.5,0,0,0,.5.5h6a.52.52,0,0,0,.45-.27.51.51,0,0,0-.05-.52L16.12,7.25,17.9,4.79A.51.51,0,0,0,18,4.27.52.52,0,0,0,17.5,4H14V2.5a.5.5,0,0,0-.5-.5h-6a.5.5,0,0,0-.5.5v8.79L2.44,15.85A1.52,1.52,0,0,0,2,16.91V20.5A1.5,1.5,0,0,0,3.5,22h18a.5.5,0,0,0,.46-.31A.47.47,0,0,0,21.85,21.15ZM16.52,5,15.1,7a.48.48,0,0,0,0,.58l1.42,2H12V9h1.5a.5.5,0,0,0,.5-.5V5ZM13,8H8V3h5ZM3.5,21a.5.5,0,0,1-.5-.5V16.91a.47.47,0,0,1,.15-.35L7.5,12.21l4.65,4.64L16.29,21Zm14.21,0-4.5-4.5,1.29-1.29L20.29,21Z"></path>{" "}
+                </g>{" "}
+              </g>
+            </svg>
+          </div>
+          <span className="text-3xl group-hover:text-white font-bold">
+            mission
+          </span>
+          <p className="text-sm text-gray-500 group-hover:text-white  ">
+            Connecting people, businesses, and communities to a better future
+          </p>
+          <p
+            id="hiddentext"
+            className=" group-hover:block mt-8 text-sm group-hover:text-white hidden  "
+          >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
+            Iure, consectetur.
+          </p>
+        </div>
+        <div
+          onMouseEnter={() => {
+            sethover2(true);
+          }}
+          onMouseLeave={() => {
+            sethover2(false);
+          }}
+          id="hoverEl"
+          className="  flex flex-col group  gap-2 p-3 w-[250px] h-[200px] border border-gray-500 transition-all duration-300 ease-linear rounded-3xl  "
+        >
+          <div className=" border rounded-full  max-w-fit  group-hover:border-gray-100 border-gray-700">
+            <svg
+              className="p-2 "
+              fill={`${!hover2 ? "#000000" : "#ffffff"}`}
+              width="64px"
+              height="64px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <title></title>{" "}
+                <g id="mission">
+                  {" "}
+                  <path d="M21.85,21.15l-7-7a.48.48,0,0,0-.7,0L12.5,15.79,8,11.29V9h3v1a.5.5,0,0,0,.5.5h6a.52.52,0,0,0,.45-.27.51.51,0,0,0-.05-.52L16.12,7.25,17.9,4.79A.51.51,0,0,0,18,4.27.52.52,0,0,0,17.5,4H14V2.5a.5.5,0,0,0-.5-.5h-6a.5.5,0,0,0-.5.5v8.79L2.44,15.85A1.52,1.52,0,0,0,2,16.91V20.5A1.5,1.5,0,0,0,3.5,22h18a.5.5,0,0,0,.46-.31A.47.47,0,0,0,21.85,21.15ZM16.52,5,15.1,7a.48.48,0,0,0,0,.58l1.42,2H12V9h1.5a.5.5,0,0,0,.5-.5V5ZM13,8H8V3h5ZM3.5,21a.5.5,0,0,1-.5-.5V16.91a.47.47,0,0,1,.15-.35L7.5,12.21l4.65,4.64L16.29,21Zm14.21,0-4.5-4.5,1.29-1.29L20.29,21Z"></path>{" "}
+                </g>{" "}
+              </g>
+            </svg>
+          </div>
+          <span className="text-3xl group-hover:text-white font-bold">
+            mission
+          </span>
+          <p className="text-sm text-gray-500 group-hover:text-white  ">
+            Connecting people, businesses, and communities to a better future
+          </p>
+          <p
+            id="hiddentext"
+            className=" group-hover:block mt-8 text-sm group-hover:text-white  hidden  "
+          >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
+            Iure, consectetur.
+          </p>
+        </div>
+        <div
+          onMouseEnter={() => {
+            sethover3(true);
+          }}
+          onMouseLeave={() => {
+            sethover3(false);
+          }}
+          id="hoverEl"
+          className=" flex flex-col group  gap-2 p-3 w-[250px] h-[200px] border border-gray-500 transition-all duration-300 ease-linear rounded-3xl  "
+        >
+          <div className=" border rounded-full  max-w-fit  group-hover:border-gray-100 border-gray-700">
+            <svg
+              className="p-2 "
+              fill={`${!hover3 ? "#000000" : "#ffffff"}`}
+              width="64px"
+              height="64px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <title></title>{" "}
+                <g id="mission">
+                  {" "}
+                  <path d="M21.85,21.15l-7-7a.48.48,0,0,0-.7,0L12.5,15.79,8,11.29V9h3v1a.5.5,0,0,0,.5.5h6a.52.52,0,0,0,.45-.27.51.51,0,0,0-.05-.52L16.12,7.25,17.9,4.79A.51.51,0,0,0,18,4.27.52.52,0,0,0,17.5,4H14V2.5a.5.5,0,0,0-.5-.5h-6a.5.5,0,0,0-.5.5v8.79L2.44,15.85A1.52,1.52,0,0,0,2,16.91V20.5A1.5,1.5,0,0,0,3.5,22h18a.5.5,0,0,0,.46-.31A.47.47,0,0,0,21.85,21.15ZM16.52,5,15.1,7a.48.48,0,0,0,0,.58l1.42,2H12V9h1.5a.5.5,0,0,0,.5-.5V5ZM13,8H8V3h5ZM3.5,21a.5.5,0,0,1-.5-.5V16.91a.47.47,0,0,1,.15-.35L7.5,12.21l4.65,4.64L16.29,21Zm14.21,0-4.5-4.5,1.29-1.29L20.29,21Z"></path>{" "}
+                </g>{" "}
+              </g>
+            </svg>
+          </div>
+          <span className="text-3xl group-hover:text-white font-bold">
+            mission
+          </span>
+          <p className="text-sm text-gray-500 group-hover:text-white  ">
+            Connecting people, businesses, and communities to a better future
+          </p>
+          <p
+            id="hiddentext"
+            className=" group-hover:block mt-8 text-sm group-hover:text-white  hidden  "
+          >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
+            Iure, consectetur.
+          </p>
+        </div>
+        <div
+          onMouseEnter={() => {
+            sethover4(true);
+          }}
+          onMouseLeave={() => {
+            sethover4(false);
+          }}
+          id="hoverEl"
+          className="  flex flex-col group  gap-2 p-3 w-[250px] h-[200px] border border-gray-500 transition-all duration-300 ease-linear rounded-3xl  "
+        >
+          <div className=" border rounded-full  max-w-fit  group-hover:border-gray-100 border-gray-700">
+            <svg
+              className="p-2 "
+              fill={`${!hover4 ? "#000000" : "#ffffff"}`}
+              width="64px"
+              height="64px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <title></title>{" "}
+                <g id="mission">
+                  {" "}
+                  <path d="M21.85,21.15l-7-7a.48.48,0,0,0-.7,0L12.5,15.79,8,11.29V9h3v1a.5.5,0,0,0,.5.5h6a.52.52,0,0,0,.45-.27.51.51,0,0,0-.05-.52L16.12,7.25,17.9,4.79A.51.51,0,0,0,18,4.27.52.52,0,0,0,17.5,4H14V2.5a.5.5,0,0,0-.5-.5h-6a.5.5,0,0,0-.5.5v8.79L2.44,15.85A1.52,1.52,0,0,0,2,16.91V20.5A1.5,1.5,0,0,0,3.5,22h18a.5.5,0,0,0,.46-.31A.47.47,0,0,0,21.85,21.15ZM16.52,5,15.1,7a.48.48,0,0,0,0,.58l1.42,2H12V9h1.5a.5.5,0,0,0,.5-.5V5ZM13,8H8V3h5ZM3.5,21a.5.5,0,0,1-.5-.5V16.91a.47.47,0,0,1,.15-.35L7.5,12.21l4.65,4.64L16.29,21Zm14.21,0-4.5-4.5,1.29-1.29L20.29,21Z"></path>{" "}
+                </g>{" "}
+              </g>
+            </svg>
+          </div>
+          <span className="text-3xl group-hover:text-white font-bold">
+            mission
+          </span>
+          <p className="text-sm text-gray-500 group-hover:text-white  ">
+            Connecting people, businesses, and communities to a better future
+          </p>
+          <p
+            id="hiddentext"
+            className=" group-hover:block mt-8 text-sm group-hover:text-white 300 hidden  "
+          >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
+            Iure, consectetur.
+          </p>
+        </div>
       </div>
     </div>
   );
