@@ -45,10 +45,10 @@ const Landing = () => {
   //   return () => ctx.revert();
   // }, []);
 
-  const container = useRef();
   useGSAP(
     () => {
       const t1 = gsap.timeline();
+
       t1.from(
         ["#acc", "#span1", "#span2", "#span3", "#para", "#more", "#spin-img"],
         {
@@ -57,31 +57,69 @@ const Landing = () => {
           delay: 0.3,
           stagger: 0.1,
           ease: "expo.inOut",
-        }
+        },
+        "first"
       )
-        .from(["#first-img", "#second-img", "#third-img"], {
-          opacity: 0,
-          scale: 0.8,
-          stagger: 1,
-        })
-        .from(["#rotate-arrow"], {
-          opacity: 0,
-          duration: 0.5,
-          rotate: 60,
-        })
-        .from(["#service-text"], {
-          opacity: 0,
-          duration: 0.8,
-          scale: 0.8,
-          ease: "expo.inOut",
-        });
+        .from(
+          ["#first-img"],
+          {
+            opacity: 0,
+            x: -100,
+            duration: 1,
+            delay: 0.5,
+          },
+          "first"
+        )
+        .from(
+          ["#third-img"],
+          {
+            opacity: 0,
+            scale: 0.8,
+            delay: 1,
+          },
+          "first"
+        )
+        .from(
+          ["#second-img"],
+          {
+            opacity: 0,
+            scale: 0.8,
+            // delay: 1,
+          },
+          "second"
+        )
+        .from(
+          ["#rotate-arrow"],
+          {
+            opacity: 0,
+            // duration: 0.5,
+            rotate: 60,
+            // delay: 1,
+          },
+          "second"
+        )
+        .from(
+          ["#service-text"],
+          {
+            opacity: 0,
+            // delay: 1,
+            // duration: 0.4,
+            scale: 0.8,
+            ease: "expo.inOut",
+          },
+          "second"
+        );
     },
     { scope: comp }
   );
 
   return (
-    <div ref={comp} className=" h-[100vh] px-[7vw] pt-[5vh] flex ">
-      <div className="flex lala relative flex-col flex-1">
+    <div
+      ref={comp}
+      id="home"
+      className=" md:h-[100vh] pb-[3vh] pt-[15vh] xl:px-[7vw] px-10 md:flex gap-10   "
+    >
+      <div className="flex lala h-[100vh] xl:auto relative flex-col xl:mb-20  flex-1">
         <div id="acc" className="flex py-4">
           <span className="px-4 py-2 max-w-fit rounded-full flex items-center bg-gray-200 text-gray-700">
             Accelerated Solutions
@@ -91,7 +129,7 @@ const Landing = () => {
           </div>
         </div>
 
-        <div className="text-6xl relative z-10  font-bold mb-8 ">
+        <div className="xl:text-6xl lg:text-5xl md:text-4xl text-4xl relative z-10  font-bold xl:mb-4 my-8  ">
           <div id="span1" className="flex items-end max-w-fit">
             <p className="bg-white  pb-4 pr-20 rounded-tr-2xl z-10">Reliable</p>{" "}
             <div className="h-[50px] w-[50px]   ">
@@ -118,11 +156,14 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <p id="para" className="w-[210px] text-gray-600">
+        <p
+          id="para"
+          className="xl:w-[210px] md:w-[70%] w-[85%] text-[14px] text-gray-600"
+        >
           Representative logistics operator providing full range of service in
           the sphere of customs clearance and transportation world wide
         </p>
-        <div className="py-4">
+        <div className="xl:py-4 py-8">
           <div
             id="more"
             className="bg-[#234664] text-white rounded-full  pr-1 pl-4 py-1 flex gap-10 max-w-fit justify-between items-center"
@@ -159,7 +200,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="max-w-fit px-12">
-          <div className="h-[80px] animate-spin-slow  w-[80px] rounded-full  overflow-hidden">
+          <div className="mid-img h-[100px] animate-spin-slow  w-[100px] xl:h-[80px] xl:w-[80px] rounded-full  overflow-hidden">
             <img
               id="spin-img"
               className="w-full h-full object-cover"
@@ -170,14 +211,14 @@ const Landing = () => {
         </div>
         <div
           id="first-img"
-          className="absolute h-full  w-[70%] right-0 rounded-3xl overflow-hidden"
+          className="absolute   hidden xl:block bg-gray-400  h-[84%] mb-10 w-[65%] right-0   rounded-3xl overflow-hidden"
         >
           <img className="h-full w-full object-cover" src={img1} alt="" />
         </div>
       </div>
       {/* right div  */}
-      <div className="flex flex-col h-full flex-[0.4] mx-10  ">
-        <div className="w-full  flex justify-between">
+      <div className="flex flex-col h-full xl:flex-[0.45] flex-1 lg:flex-[0.7]   ">
+        <div className="w-full  flex px-5 xl:px-0 justify-between">
           <div
             id="second-img"
             className=" overflow-hidden h-[150px]  w-[150px]  rounded-3xl"
@@ -188,7 +229,7 @@ const Landing = () => {
               alt=""
             />
           </div>
-          <div className="relative">
+          <div className="relative right-10  ">
             <div
               id="rotate-arrow"
               className="h-[150px]  w-[150px] -rotate-45 rounded-full border-y-2 border-l-2 overflow-hidden"
@@ -222,7 +263,7 @@ const Landing = () => {
             </div>
             <p
               id="service-text"
-              className="text-gray-600 absolute top-5 -right-10 "
+              className="text-gray-600 absolute top-5 -right-12 "
             >
               Our Service
             </p>

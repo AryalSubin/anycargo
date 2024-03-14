@@ -10,6 +10,7 @@ import About from "./components/About/About";
 import OurServices from "./components/OurServices/OurServices";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Footer from "./components/Footer/Footer";
+import Review from "./components/review/Review";
 
 function App() {
   const comp = useRef(null);
@@ -27,8 +28,9 @@ function App() {
       <Landing />
       <About />
       <OurServices />
+      <Review />
       <ContactUs />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

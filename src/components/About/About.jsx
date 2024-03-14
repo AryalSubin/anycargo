@@ -9,13 +9,17 @@ const About = () => {
   const [hover4, sethover4] = useState(false);
 
   return (
-    <div className=" relative w-full h-screen flex flex-col  py-20  bg-white">
+    <div
+      id="about"
+      className=" relative w-full  flex flex-col  py-20  bg-white"
+    >
       <div className="p-12 ">
-        <h1 className="text-center text-4xl my-8 font-bold ">About Us</h1>
-        <p className="text-center text-xl  px-[20vw]">
-          SAY GOODBYE TO EXCESS BAGGAGE WORRIES <br />
-          We've got you covered with our efficient courier service. Ship your
-          extra luggage hassle-free and travel light!{" "}
+        <h1 className="text-center text-sm text-[#48B9A2] mb-8 font-bold ">
+          Know who we are
+        </h1>
+        <p className="text-center text-xl text-[#234664]  px-[20vw]">
+          We've got you covered with our efficient courier service. <br /> Ship
+          your extra luggage hassle-free <br /> and travel light!{" "}
         </p>
       </div>
       {/* boxes  */}
@@ -117,7 +121,7 @@ const About = () => {
           );
         })}
       </div> */}
-      <div className="flex absolute bottom-20 w-full  px-20 justify-center flex-wrap gap-4 items-end ">
+      <div className="flex  bottom-20 w-full h-[300px]  px-20 justify-center  flex-wrap gap-4 items-end ">
         <div
           onMouseEnter={() => {
             sethover1(true);
@@ -126,47 +130,54 @@ const About = () => {
             sethover1(false);
           }}
           id="hoverEl"
-          className="  flex flex-col group  gap-2 p-3 w-[250px] h-[200px] border border-gray-500 transition-all duration-300 ease-linear rounded-3xl  "
+          className=" relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
         >
-          <div className=" border rounded-full  max-w-fit  group-hover:border-gray-100 border-gray-700">
-            <svg
-              className="p-2 "
-              fill={`${!hover1 ? "#000000" : "#ffffff"}`}
-              width="64px"
-              height="64px"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <title></title>{" "}
-                <g id="mission">
+          <div className="z-20 flex flex-col h-full py-4 justify-between">
+            <div className=" border rounded-full   max-w-fit  group-hover:border-gray-100 border-gray-400">
+              <svg
+                className="px-2 text-[#4CB797] "
+                fill="#4CB797"
+                width="40px"
+                height="40px"
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
                   {" "}
-                  <path d="M21.85,21.15l-7-7a.48.48,0,0,0-.7,0L12.5,15.79,8,11.29V9h3v1a.5.5,0,0,0,.5.5h6a.52.52,0,0,0,.45-.27.51.51,0,0,0-.05-.52L16.12,7.25,17.9,4.79A.51.51,0,0,0,18,4.27.52.52,0,0,0,17.5,4H14V2.5a.5.5,0,0,0-.5-.5h-6a.5.5,0,0,0-.5.5v8.79L2.44,15.85A1.52,1.52,0,0,0,2,16.91V20.5A1.5,1.5,0,0,0,3.5,22h18a.5.5,0,0,0,.46-.31A.47.47,0,0,0,21.85,21.15ZM16.52,5,15.1,7a.48.48,0,0,0,0,.58l1.42,2H12V9h1.5a.5.5,0,0,0,.5-.5V5ZM13,8H8V3h5ZM3.5,21a.5.5,0,0,1-.5-.5V16.91a.47.47,0,0,1,.15-.35L7.5,12.21l4.65,4.64L16.29,21Zm14.21,0-4.5-4.5,1.29-1.29L20.29,21Z"></path>{" "}
-                </g>{" "}
-              </g>
-            </svg>
+                  <g id="icomoon-ignore"> </g>{" "}
+                  <path
+                    d="M9.123 30.464l-1.33-6.268-6.318-1.397 1.291-2.475 5.785-0.316c0.297-0.386 0.96-1.234 1.374-1.648l5.271-5.271-10.989-5.388 2.782-2.782 13.932 2.444 4.933-4.933c0.585-0.585 1.496-0.894 2.634-0.894 0.776 0 1.395 0.143 1.421 0.149l0.3 0.070 0.089 0.295c0.469 1.55 0.187 3.298-0.67 4.155l-4.956 4.956 2.434 13.875-2.782 2.782-5.367-10.945-4.923 4.924c-0.518 0.517-1.623 1.536-2.033 1.912l-0.431 5.425-2.449 1.329zM3.065 22.059l5.63 1.244 1.176 5.544 0.685-0.372 0.418-5.268 0.155-0.142c0.016-0.014 1.542-1.409 2.153-2.020l5.978-5.979 5.367 10.945 1.334-1.335-2.434-13.876 5.349-5.348c0.464-0.464 0.745-1.598 0.484-2.783-0.216-0.032-0.526-0.066-0.87-0.066-0.593 0-1.399 0.101-1.881 0.582l-5.325 5.325-13.933-2.444-1.335 1.334 10.989 5.388-6.326 6.326c-0.483 0.482-1.418 1.722-1.428 1.734l-0.149 0.198-5.672 0.31-0.366 0.702z"
+                    fill={`${!hover1 ? "#4CB797" : "#ffffff"}`}
+                  >
+                    {" "}
+                  </path>{" "}
+                </g>
+              </svg>
+            </div>
+            <span className="text-sm group-hover:text-white text-[#4CB797] font-bold">
+              Reliable
+            </span>
+            <p className="text-sm group-hover:w-[80%] text-gray-500 group-hover:text-gray-100  ">
+              Connecting people, businesses, and communities to a better future
+            </p>
+            <p
+              id="hiddentext"
+              className=" group-hover:block mt-8 group-hover:text-gray-300 text-sm  hidden  "
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
+              consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
+              Iure, consectetur.
+            </p>
           </div>
-          <span className="text-3xl group-hover:text-white font-bold">
-            mission
-          </span>
-          <p className="text-sm text-gray-500 group-hover:text-white  ">
-            Connecting people, businesses, and communities to a better future
-          </p>
-          <p
-            id="hiddentext"
-            className=" group-hover:block mt-8 text-sm group-hover:text-white hidden  "
-          >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-            consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
-            Iure, consectetur.
-          </p>
+          <div className="absolute h-full w-full top-0 left-0 group-hover:bg-black group-hover:opacity-25 z-10 rounded-3xl"></div>
         </div>
         <div
           onMouseEnter={() => {
@@ -176,147 +187,741 @@ const About = () => {
             sethover2(false);
           }}
           id="hoverEl"
-          className="  flex flex-col group  gap-2 p-3 w-[250px] h-[200px] border border-gray-500 transition-all duration-300 ease-linear rounded-3xl  "
+          className=" relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
         >
-          <div className=" border rounded-full  max-w-fit  group-hover:border-gray-100 border-gray-700">
-            <svg
-              className="p-2 "
-              fill={`${!hover2 ? "#000000" : "#ffffff"}`}
-              width="64px"
-              height="64px"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <title></title>{" "}
-                <g id="mission">
-                  {" "}
-                  <path d="M21.85,21.15l-7-7a.48.48,0,0,0-.7,0L12.5,15.79,8,11.29V9h3v1a.5.5,0,0,0,.5.5h6a.52.52,0,0,0,.45-.27.51.51,0,0,0-.05-.52L16.12,7.25,17.9,4.79A.51.51,0,0,0,18,4.27.52.52,0,0,0,17.5,4H14V2.5a.5.5,0,0,0-.5-.5h-6a.5.5,0,0,0-.5.5v8.79L2.44,15.85A1.52,1.52,0,0,0,2,16.91V20.5A1.5,1.5,0,0,0,3.5,22h18a.5.5,0,0,0,.46-.31A.47.47,0,0,0,21.85,21.15ZM16.52,5,15.1,7a.48.48,0,0,0,0,.58l1.42,2H12V9h1.5a.5.5,0,0,0,.5-.5V5ZM13,8H8V3h5ZM3.5,21a.5.5,0,0,1-.5-.5V16.91a.47.47,0,0,1,.15-.35L7.5,12.21l4.65,4.64L16.29,21Zm14.21,0-4.5-4.5,1.29-1.29L20.29,21Z"></path>{" "}
-                </g>{" "}
-              </g>
-            </svg>
+          <div className="z-20 flex flex-col h-full py-4 justify-between">
+            <div>
+              <div className=" border rounded-full   max-w-fit  group-hover:border-gray-100 border-gray-400">
+                <svg
+                  className="p-2"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 32 32"
+                  enable-background="new 0 0 32 32"
+                  id="_x3C_Layer_x3E_"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill={!hover2 ? "#4CB797" : "#ffffff"}
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <g id="ship_x2C__cruiser_x2C__passenger_x2C__maritime_transport">
+                      {" "}
+                      <g id="XMLID_2330_">
+                        {" "}
+                        <line
+                          fill="none"
+                          id="XMLID_2331_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="25.5"
+                          x2="24.5"
+                          y1="18.5"
+                          y2="18.5"
+                        ></line>{" "}
+                        <path
+                          d=" M18.5,29.5c1.38,0,2.061-0.55,2.5-1.5c0.42,0.95,1.12,1.5,2.5,1.5s2.029-0.52,2.5-1.5c0.47,1,1.12,1.5,2.5,1.5 c0.965,0,1.582-0.244,2.02-0.732"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2332_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <path
+                          d=" M3.5,26.5c1.38,0,2.061-0.55,2.5-1.5c0.42,0.95,1.12,1.5,2.5,1.5s2.029-0.52,2.5-1.5c0.47,1,1.12,1.5,2.5,1.5S15.55,26,16,25 c0.5,0.97,1.12,1.5,2.5,1.5s2.02-0.52,2.5-1.5c0.45,0.98,1.12,1.5,2.5,1.5"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2333_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <path
+                          d=" M25.5,25"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2334_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <line
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2335_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="1.585"
+                          x2="1.515"
+                          y1="25.935"
+                          y2="25.865"
+                        ></line>{" "}
+                        <g id="XMLID_2336_">
+                          {" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2337_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="16.6"
+                            x2="16.5"
+                            y1="29.5"
+                            y2="29.5"
+                          ></line>{" "}
+                        </g>{" "}
+                        <polyline
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2338_"
+                          points=" 27.5,16.5 22.5,10.5 22,7.5 5.9,7.5 5.4,10.5 4,10.5 2.5,16.5 "
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></polyline>{" "}
+                        <path
+                          d=" M27.5,16.5h3l-3.44,7.64c-0.64,1.44-2.069,2.36-3.649,2.36"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2339_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <path
+                          d=" M3.36,24.573c-0.235-0.39-0.408-0.825-0.5-1.293L1.5,16.5h22"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2340_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <polygon
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2341_"
+                          points=" 13.5,7.5 8.5,7.5 9,4.5 11.5,4.5 "
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></polygon>{" "}
+                        <line
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2342_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="19.5"
+                          x2="19.5"
+                          y1="4.5"
+                          y2="7.5"
+                        ></line>{" "}
+                        <g id="XMLID_2343_">
+                          {" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2344_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="20.5"
+                            x2="21.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2345_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="5.5"
+                            x2="6.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2346_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="8.5"
+                            x2="9.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2347_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="11.5"
+                            x2="12.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2348_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="14.5"
+                            x2="15.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2349_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="17.5"
+                            x2="18.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2350_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="6.5"
+                            x2="7.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2351_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="9.5"
+                            x2="10.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2352_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="12.5"
+                            x2="13.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2353_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="15.5"
+                            x2="16.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2354_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="18.5"
+                            x2="19.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2355_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="7.5"
+                            x2="8.5"
+                            y1="10.5"
+                            y2="10.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2356_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="10.5"
+                            x2="11.5"
+                            y1="10.5"
+                            y2="10.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2357_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="13.5"
+                            x2="14.5"
+                            y1="10.5"
+                            y2="10.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2358_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="16.5"
+                            x2="17.5"
+                            y1="10.5"
+                            y2="10.5"
+                          ></line>{" "}
+                        </g>{" "}
+                        <line
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2362_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="20.5"
+                          x2="22.5"
+                          y1="10.5"
+                          y2="10.5"
+                        ></line>{" "}
+                      </g>{" "}
+                    </g>{" "}
+                  </g>
+                </svg>
+              </div>
+              <div>
+                <span className="text-sm group-hover:text-white text-[#4CB797] font-bold">
+                  Innovative
+                </span>
+                <p className="text-3xl font-semibold group-hover:text-white group-hover:text-xl ">
+                  Ocean Freight Service
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-between">
+              <p className="text-sm hidden group-hover:block group-hover:w-[90%] text-gray-500 group-hover:text-gray-100  ">
+                Connecting people, businesses, and communities to a better
+                future Connecting people, businesses, and communities to a
+                better future
+              </p>
+            </div>
           </div>
-          <span className="text-3xl group-hover:text-white font-bold">
-            mission
-          </span>
-          <p className="text-sm text-gray-500 group-hover:text-white  ">
-            Connecting people, businesses, and communities to a better future
-          </p>
-          <p
-            id="hiddentext"
-            className=" group-hover:block mt-8 text-sm group-hover:text-white  hidden  "
-          >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-            consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
-            Iure, consectetur.
-          </p>
+          <div className="absolute h-full w-full top-0 left-0 group-hover:bg-black group-hover:opacity-25 z-10 rounded-3xl"></div>
         </div>
         <div
           onMouseEnter={() => {
-            sethover3(true);
+            sethover2(true);
           }}
           onMouseLeave={() => {
-            sethover3(false);
+            sethover2(false);
           }}
           id="hoverEl"
-          className=" flex flex-col group  gap-2 p-3 w-[250px] h-[200px] border border-gray-500 transition-all duration-300 ease-linear rounded-3xl  "
+          className=" relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
         >
-          <div className=" border rounded-full  max-w-fit  group-hover:border-gray-100 border-gray-700">
-            <svg
-              className="p-2 "
-              fill={`${!hover3 ? "#000000" : "#ffffff"}`}
-              width="64px"
-              height="64px"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <title></title>{" "}
-                <g id="mission">
-                  {" "}
-                  <path d="M21.85,21.15l-7-7a.48.48,0,0,0-.7,0L12.5,15.79,8,11.29V9h3v1a.5.5,0,0,0,.5.5h6a.52.52,0,0,0,.45-.27.51.51,0,0,0-.05-.52L16.12,7.25,17.9,4.79A.51.51,0,0,0,18,4.27.52.52,0,0,0,17.5,4H14V2.5a.5.5,0,0,0-.5-.5h-6a.5.5,0,0,0-.5.5v8.79L2.44,15.85A1.52,1.52,0,0,0,2,16.91V20.5A1.5,1.5,0,0,0,3.5,22h18a.5.5,0,0,0,.46-.31A.47.47,0,0,0,21.85,21.15ZM16.52,5,15.1,7a.48.48,0,0,0,0,.58l1.42,2H12V9h1.5a.5.5,0,0,0,.5-.5V5ZM13,8H8V3h5ZM3.5,21a.5.5,0,0,1-.5-.5V16.91a.47.47,0,0,1,.15-.35L7.5,12.21l4.65,4.64L16.29,21Zm14.21,0-4.5-4.5,1.29-1.29L20.29,21Z"></path>{" "}
-                </g>{" "}
-              </g>
-            </svg>
+          <div className="z-20 flex flex-col h-full py-4 justify-between">
+            <div>
+              <div className=" border rounded-full   max-w-fit  group-hover:border-gray-100 border-gray-400">
+                <svg
+                  className="p-2"
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 32 32"
+                  enable-background="new 0 0 32 32"
+                  id="_x3C_Layer_x3E_"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill={!hover2 ? "#4CB797" : "#ffffff"}
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <g id="ship_x2C__cruiser_x2C__passenger_x2C__maritime_transport">
+                      {" "}
+                      <g id="XMLID_2330_">
+                        {" "}
+                        <line
+                          fill="none"
+                          id="XMLID_2331_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="25.5"
+                          x2="24.5"
+                          y1="18.5"
+                          y2="18.5"
+                        ></line>{" "}
+                        <path
+                          d=" M18.5,29.5c1.38,0,2.061-0.55,2.5-1.5c0.42,0.95,1.12,1.5,2.5,1.5s2.029-0.52,2.5-1.5c0.47,1,1.12,1.5,2.5,1.5 c0.965,0,1.582-0.244,2.02-0.732"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2332_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <path
+                          d=" M3.5,26.5c1.38,0,2.061-0.55,2.5-1.5c0.42,0.95,1.12,1.5,2.5,1.5s2.029-0.52,2.5-1.5c0.47,1,1.12,1.5,2.5,1.5S15.55,26,16,25 c0.5,0.97,1.12,1.5,2.5,1.5s2.02-0.52,2.5-1.5c0.45,0.98,1.12,1.5,2.5,1.5"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2333_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <path
+                          d=" M25.5,25"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2334_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <line
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2335_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="1.585"
+                          x2="1.515"
+                          y1="25.935"
+                          y2="25.865"
+                        ></line>{" "}
+                        <g id="XMLID_2336_">
+                          {" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2337_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="16.6"
+                            x2="16.5"
+                            y1="29.5"
+                            y2="29.5"
+                          ></line>{" "}
+                        </g>{" "}
+                        <polyline
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2338_"
+                          points=" 27.5,16.5 22.5,10.5 22,7.5 5.9,7.5 5.4,10.5 4,10.5 2.5,16.5 "
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></polyline>{" "}
+                        <path
+                          d=" M27.5,16.5h3l-3.44,7.64c-0.64,1.44-2.069,2.36-3.649,2.36"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2339_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <path
+                          d=" M3.36,24.573c-0.235-0.39-0.408-0.825-0.5-1.293L1.5,16.5h22"
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2340_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></path>{" "}
+                        <polygon
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2341_"
+                          points=" 13.5,7.5 8.5,7.5 9,4.5 11.5,4.5 "
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        ></polygon>{" "}
+                        <line
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2342_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="19.5"
+                          x2="19.5"
+                          y1="4.5"
+                          y2="7.5"
+                        ></line>{" "}
+                        <g id="XMLID_2343_">
+                          {" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2344_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="20.5"
+                            x2="21.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2345_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="5.5"
+                            x2="6.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2346_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="8.5"
+                            x2="9.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2347_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="11.5"
+                            x2="12.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2348_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="14.5"
+                            x2="15.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2349_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="17.5"
+                            x2="18.5"
+                            y1="14.5"
+                            y2="14.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2350_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="6.5"
+                            x2="7.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2351_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="9.5"
+                            x2="10.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2352_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="12.5"
+                            x2="13.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2353_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="15.5"
+                            x2="16.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2354_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="18.5"
+                            x2="19.5"
+                            y1="12.5"
+                            y2="12.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2355_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="7.5"
+                            x2="8.5"
+                            y1="10.5"
+                            y2="10.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2356_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="10.5"
+                            x2="11.5"
+                            y1="10.5"
+                            y2="10.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2357_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="13.5"
+                            x2="14.5"
+                            y1="10.5"
+                            y2="10.5"
+                          ></line>{" "}
+                          <line
+                            fill={!hover2 ? "#4CB797" : "#ffffff"}
+                            id="XMLID_2358_"
+                            stroke="#263238"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            x1="16.5"
+                            x2="17.5"
+                            y1="10.5"
+                            y2="10.5"
+                          ></line>{" "}
+                        </g>{" "}
+                        <line
+                          fill={!hover2 ? "#4CB797" : "#ffffff"}
+                          id="XMLID_2362_"
+                          stroke="#263238"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          x1="20.5"
+                          x2="22.5"
+                          y1="10.5"
+                          y2="10.5"
+                        ></line>{" "}
+                      </g>{" "}
+                    </g>{" "}
+                  </g>
+                </svg>
+              </div>
+              <div>
+                <span className="text-sm group-hover:text-white text-[#4CB797] font-bold">
+                  Innovative
+                </span>
+                <p className="text-3xl font-semibold group-hover:text-white group-hover:text-xl ">
+                  Ocean Freight Service
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-between">
+              <p className="text-sm hidden group-hover:block group-hover:w-[90%] text-gray-500 group-hover:text-gray-100  ">
+                Connecting people, businesses, and communities to a better
+                future Connecting people, businesses, and communities to a
+                better future
+              </p>
+            </div>
           </div>
-          <span className="text-3xl group-hover:text-white font-bold">
-            mission
-          </span>
-          <p className="text-sm text-gray-500 group-hover:text-white  ">
-            Connecting people, businesses, and communities to a better future
-          </p>
-          <p
-            id="hiddentext"
-            className=" group-hover:block mt-8 text-sm group-hover:text-white  hidden  "
-          >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-            consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
-            Iure, consectetur.
-          </p>
-        </div>
-        <div
-          onMouseEnter={() => {
-            sethover4(true);
-          }}
-          onMouseLeave={() => {
-            sethover4(false);
-          }}
-          id="hoverEl"
-          className="  flex flex-col group  gap-2 p-3 w-[250px] h-[200px] border border-gray-500 transition-all duration-300 ease-linear rounded-3xl  "
-        >
-          <div className=" border rounded-full  max-w-fit  group-hover:border-gray-100 border-gray-700">
-            <svg
-              className="p-2 "
-              fill={`${!hover4 ? "#000000" : "#ffffff"}`}
-              width="64px"
-              height="64px"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <title></title>{" "}
-                <g id="mission">
-                  {" "}
-                  <path d="M21.85,21.15l-7-7a.48.48,0,0,0-.7,0L12.5,15.79,8,11.29V9h3v1a.5.5,0,0,0,.5.5h6a.52.52,0,0,0,.45-.27.51.51,0,0,0-.05-.52L16.12,7.25,17.9,4.79A.51.51,0,0,0,18,4.27.52.52,0,0,0,17.5,4H14V2.5a.5.5,0,0,0-.5-.5h-6a.5.5,0,0,0-.5.5v8.79L2.44,15.85A1.52,1.52,0,0,0,2,16.91V20.5A1.5,1.5,0,0,0,3.5,22h18a.5.5,0,0,0,.46-.31A.47.47,0,0,0,21.85,21.15ZM16.52,5,15.1,7a.48.48,0,0,0,0,.58l1.42,2H12V9h1.5a.5.5,0,0,0,.5-.5V5ZM13,8H8V3h5ZM3.5,21a.5.5,0,0,1-.5-.5V16.91a.47.47,0,0,1,.15-.35L7.5,12.21l4.65,4.64L16.29,21Zm14.21,0-4.5-4.5,1.29-1.29L20.29,21Z"></path>{" "}
-                </g>{" "}
-              </g>
-            </svg>
-          </div>
-          <span className="text-3xl group-hover:text-white font-bold">
-            mission
-          </span>
-          <p className="text-sm text-gray-500 group-hover:text-white  ">
-            Connecting people, businesses, and communities to a better future
-          </p>
-          <p
-            id="hiddentext"
-            className=" group-hover:block mt-8 text-sm group-hover:text-white 300 hidden  "
-          >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-            consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
-            Iure, consectetur.
-          </p>
+          <div className="absolute h-full w-full top-0 left-0 group-hover:bg-black group-hover:opacity-25 z-10 rounded-3xl"></div>
         </div>
       </div>
     </div>

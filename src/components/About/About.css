@@ -1,10 +1,11 @@
 #hoverEl:hover{
     
-    /* background-image: url("warehousing.jpg"); */
+    background-image: url("warehousing.jpg");
 
     height:300px ;
     width: 400px;
-    background-color: cadetblue;
+    transition: height 1.5s ease, width 0.2s ease;
+    /* background-color: cadetblue; */
     
     
 }
