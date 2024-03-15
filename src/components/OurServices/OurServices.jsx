@@ -17,7 +17,7 @@ const OurServices = () => {
       const t1 = gsap.timeline({
         scrollTrigger: {
           trigger: services.current,
-          markers: true,
+          // markers: true,
           scrub: 3,
 
           start: "top 70%",
@@ -66,10 +66,10 @@ const OurServices = () => {
               <div
                 style={{ backgroundColor: item.color }}
                 id={id}
-                className={`service p-2 w-[320px] h-[110px] border  text-center flex flex-col justify-center items-center  rounded-3xl`}
+                className={`service p-4 w-[320px]  h-[130px] border  text-center flex flex-col justify-center items-center  rounded-3xl`}
               >
                 <p className="font-bold mb-1">{item.text}</p>
-                <p className="font-thin text-[10px] text-gray-700 ">
+                <p className=" text-[10px] font-medium text-gray-600">
                   {item.content}
                 </p>
               </div>
@@ -89,7 +89,7 @@ const servicesData = [
     content:
       "Facilitating smooth import and export operations with global reach and local expertise.",
     image: iExport,
-    color: "#FF6B6B",
+    color: "#D3E9E4",
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ const servicesData = [
       "Connecting continents with reliable and efficient international shipping services, tailored to meet your global trade needs.",
 
     image: warehouse,
-    color: "#48BB78",
+    color: "#F2E1D7",
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ const servicesData = [
       "Delivering your projects on time and within budget through meticulous planning and execution.",
 
     image: projectM,
-    color: "#81E6D9",
+    color: "#DAD9D5",
   },
   {
     id: 4,
@@ -117,7 +117,7 @@ const servicesData = [
       "Optimizing your supply chain for efficiency and resilience, from supplier to customer.",
 
     image: iExport,
-    color: "#63B3ED",
+    color: "#D3D6DD",
   },
   {
     id: 5,
@@ -126,7 +126,7 @@ const servicesData = [
       "Navigating complex customs regulations for you, ensuring fast and compliant clearance.",
 
     image: iExport,
-    color: "#A78BFA",
+    color: "#B3E9CA",
   },
   {
     id: 6,
@@ -135,7 +135,7 @@ const servicesData = [
       "Providing reliable and efficient haulage solutions for the seamless transition of your goods.",
 
     image: iExport,
-    color: "#F6E05E",
+    color: "#E6EBF3",
   },
   {
     id: 7,
@@ -153,7 +153,7 @@ const servicesData = [
       "Expert handling, packaging, and distribution services to ensure your products reach their destination in pristine condition.",
 
     image: iExport,
-    color: "#9AE6B4",
+    color: "#F0DFC3",
   },
   {
     id: 9,
@@ -162,7 +162,7 @@ const servicesData = [
       "Offering comprehensive insurance options to protect your cargo against all risks during transit.",
 
     image: iExport,
-    color: "#90CDF4",
+    color: "#D4CEFF",
   },
   {
     id: 10,
@@ -171,6 +171,6 @@ const servicesData = [
       "Speedy, reliable door-to-door express courier services for when time is of the essence.",
 
     image: iExport,
-    color: "#FED7D7",
+    color: "#E2EEDE",
   },
 ];

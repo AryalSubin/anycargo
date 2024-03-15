@@ -6,6 +6,7 @@ import img1 from "../../assets/landing/ship1.jpg";
 import img2 from "../../assets/landing/ship2.jpg";
 import img3 from "../../assets/landing/plane.jpg";
 import img4 from "../../assets/landing/luz.png";
+import { CustomEase } from "gsap/all";
 
 const Landing = () => {
   const comp = useRef(null);
@@ -47,7 +48,38 @@ const Landing = () => {
 
   useGSAP(
     () => {
-      const t1 = gsap.timeline();
+      const t1 = gsap.timeline({});
+      const t2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: comp.current,
+          // markers: true,
+          scrub: 2,
+
+          start: "50% 40%",
+          end: "80% 20%",
+        },
+      });
+      t2.to(
+        ".rightDiv",
+        {
+          y: -600,
+          ease: "linear",
+          // delay: 0.5,
+        },
+        "parallax"
+      ).to(
+        ".leftDiv",
+        {
+          y: -300,
+          // delay: 0.4,
+          // ease: "back.inOut",
+          ease: CustomEase.create(
+            "custom",
+            "M0,0 C0,0 0.14,0.033 0.185,0.048 0.224,0.061 0.298,0.091 0.335,0.109 0.371,0.127 0.441,0.168 0.475,0.192 0.508,0.216 0.57,0.268 0.6,0.297 0.632,0.329 0.666,0.524 0.693,0.561 0.721,0.598 0.757,0.683 0.781,0.724 0.806,0.77 0.846,0.805 0.868,0.854 0.891,0.907 1,1 1,1 "
+          ),
+        },
+        "parallax"
+      );
 
       t1.from(
         ["#acc", "#span1", "#span2", "#span3", "#para", "#more", "#spin-img"],
@@ -119,7 +151,7 @@ const Landing = () => {
       id="home"
       className=" md:h-[100vh] pb-[3vh] pt-[15vh] xl:px-[7vw] px-10 md:flex gap-10   "
     >
-      <div className="flex lala h-[100vh] xl:auto relative flex-col xl:mb-20  flex-1">
+      <div className="flex leftDiv z-20 lala h-[100vh] xl:auto relative flex-col xl:mb-20  flex-1">
         <div id="acc" className="flex py-4">
           <span className="px-4 py-2 max-w-fit rounded-full flex items-center bg-gray-200 text-gray-700">
             Accelerated Solutions
@@ -217,11 +249,11 @@ const Landing = () => {
         </div>
       </div>
       {/* right div  */}
-      <div className="flex flex-col h-full xl:flex-[0.45] flex-1 lg:flex-[0.7]   ">
+      <div className="flex rightDiv flex-col h-full xl:flex-[0.45] flex-1 lg:flex-[0.7]   ">
         <div className="w-full  flex px-5 xl:px-0 justify-between">
           <div
             id="second-img"
-            className=" overflow-hidden h-[150px]  w-[150px]  rounded-3xl"
+            className=" rigntbelowTrigger overflow-hidden h-[150px]  w-[150px]  rounded-3xl"
           >
             <img
               className="w-full h-full object-center object-fill "

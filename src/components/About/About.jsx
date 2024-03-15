@@ -1,25 +1,76 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import warehouse from "../../assets/about/warehousing.jpg";
 import "./About.css";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
+gsap.registerPlugin(ScrollTrigger);
 const About = () => {
+  const aboutRef = useRef(null);
   const [hover1, sethover1] = useState(false);
   const [hover2, sethover2] = useState(false);
   const [hover3, sethover3] = useState(false);
   const [hover4, sethover4] = useState(false);
 
+  useGSAP(
+    () => {
+      const t1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          markers: true,
+          scrub: 3,
+
+          start: "top 70%",
+          end: "top 20%",
+        },
+      });
+
+      t1.from(".paraText", {
+        opacity: 0,
+        y: "100px",
+        x: "-50px",
+        duration: 2,
+
+        stagger: 0.5,
+
+        // ease: "expo.inOut",
+      });
+      t1.from(".spanText", {
+        padding: "1vh",
+        fontSize: "2vh",
+
+        rotate: 3,
+
+        // ease: "expo.inOut",
+      });
+    },
+    { scope: aboutRef }
+  );
+
+  useGSAP(() => {
+    const t1 = gsap.timeline();
+  });
+
   return (
     <div
+      ref={aboutRef}
       id="about"
       className=" relative w-full  flex flex-col  py-20  bg-white"
     >
-      <div className="p-12 ">
+      <div className=" aboutText p-12 ">
         <h1 className="text-center text-sm text-[#48B9A2] mb-8 font-bold ">
-          Know who we are
+          {"Know who we are".split("").map((item) => {
+            return <span className="spanText">{item}</span>;
+          })}
         </h1>
-        <p className="text-center text-xl text-[#234664]  px-[20vw]">
-          We've got you covered with our efficient courier service. <br /> Ship
-          your extra luggage hassle-free <br /> and travel light!{" "}
+        <p className="  text-center text-xl text-[#234664]  px-[20vw]">
+          {" "}
+          {"We've got you covered with our efficient courier service.Ship your extra luggage hassle-free  and travel light!"
+            .split("")
+            .map((item) => {
+              return <span className="paraText">{item}</span>;
+            })}
         </p>
       </div>
       {/* boxes  */}

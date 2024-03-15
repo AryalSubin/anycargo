@@ -1,22 +1,46 @@
-import React from "react";
+import React, { useRef } from "react";
 import img1 from "../../assets/r1.jpg";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Review = () => {
+  const review = useRef();
+
+  useGSAP(
+    () => {
+      const t1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: review.current,
+          // markers: true,
+          scrub: 3,
+
+          start: "top 70%",
+          end: "top 20%",
+        },
+      });
+    },
+    { scope: review }
+  );
+
   return (
     <div
+      ref={review}
       id="review"
       className=" flex flex-col justify-around text-center py-20"
     >
-      <div>
+      <div className="firstDiv">
         <h1 className="  text-sm text-[#40B69E] ">Reviews</h1>
         <p className="text-3xl text-[#234664] mt-4">
           We care about our <br /> Customers experience too
         </p>
       </div>
-      <div className="flex  justify-center mt-20 gap-12 flex-wrap items-center">
+      <div className="flex reviews  justify-center mt-20 gap-12 flex-wrap items-center">
         {[1, 2, 3].map(() => {
           return (
-            <div className="relative w-[400px] text-left bg-gray-100 shadow-sm hover:shadow-xl transition duration-200 px-8 pb-4 rounded-3xl">
+            <div className="  relative w-[400px] text-left bg-gray-100 shadow-sm hover:shadow-xl transition duration-200 px-8 pb-4 rounded-3xl">
               <p className="text-sm mt-16 text-left text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
                 incidunt consectetur illum vel sit exercitationem, placeat earum
