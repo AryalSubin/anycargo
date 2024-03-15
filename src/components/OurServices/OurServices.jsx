@@ -26,20 +26,19 @@ const OurServices = () => {
       });
 
       t1.from(".service", {
-        x: -20,
+        y: 200,
         opacity: 0,
 
         duration: 2,
         stagger: 0.5,
         rotate: -5,
-        ease: "expo.inOut",
       });
     },
     { scope: services }
   );
 
   return (
-    <div ref={services} id="services" className="my-16  ">
+    <div ref={services} id="services" className="my-24  ">
       <p className="text-center my-16 text-4xl font-bold">Our Services</p>
       <div className="flex  justify-center flex-wrap gap-4  px-20   ">
         {/* {servicesData.map((item) => {

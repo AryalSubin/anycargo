@@ -82,7 +82,7 @@ const Landing = () => {
       );
 
       t1.from(
-        ["#acc", "#span1", "#span2", "#span3", "#para", "#more", "#spin-img"],
+        ["#acc", "#span1", "#span2", "#span3", "#para", "#more"],
         {
           x: -5,
           opacity: 0,
@@ -149,7 +149,7 @@ const Landing = () => {
     <div
       ref={comp}
       id="home"
-      className=" md:h-[100vh] pb-[3vh] pt-[15vh] xl:px-[7vw] px-10 md:flex gap-10   "
+      className="h-[70vh] md:h-[100vh] pb-[3vh] pt-[15vh] xl:px-[7vw] px-10 md:flex gap-10   "
     >
       <div className="flex leftDiv z-20 lala h-[100vh] xl:auto relative flex-col xl:mb-20  flex-1">
         <div id="acc" className="flex py-4">
@@ -190,12 +190,12 @@ const Landing = () => {
         </div>
         <p
           id="para"
-          className="xl:w-[210px] md:w-[70%] w-[85%] text-[14px] text-gray-600"
+          className="xl:w-[210px] md:w-[70%] w-[85%] pl-1 text-[14px] text-gray-600"
         >
           Representative logistics operator providing full range of service in
           the sphere of customs clearance and transportation world wide
         </p>
-        <div className="xl:py-4 py-8">
+        <div className="xl:py-4 py-8 mt-8">
           <div
             id="more"
             className="bg-[#234664] text-white rounded-full  pr-1 pl-4 py-1 flex gap-10 max-w-fit justify-between items-center"
@@ -231,7 +231,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-fit px-12">
+        {/* <div className="max-w-fit px-12">
           <div className="mid-img h-[100px] animate-spin-slow  w-[100px] xl:h-[80px] xl:w-[80px] rounded-full  overflow-hidden">
             <img
               id="spin-img"
@@ -240,7 +240,7 @@ const Landing = () => {
               alt="luz"
             />
           </div>
-        </div>
+        </div> */}
         <div
           id="first-img"
           className="absolute   hidden xl:block bg-gray-400  h-[84%] mb-10 w-[65%] right-0   rounded-3xl overflow-hidden"
@@ -249,7 +249,7 @@ const Landing = () => {
         </div>
       </div>
       {/* right div  */}
-      <div className="flex rightDiv flex-col h-full xl:flex-[0.45] flex-1 lg:flex-[0.7]   ">
+      <div className="xl:flex hidden  rightDiv flex-col h-[102.5%] xl:flex-[0.45] flex-1 lg:flex-[0.7]   ">
         <div className="w-full  flex px-5 xl:px-0 justify-between">
           <div
             id="second-img"
