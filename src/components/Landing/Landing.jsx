@@ -10,41 +10,6 @@ import { CustomEase } from "gsap/all";
 
 const Landing = () => {
   const comp = useRef(null);
-  // useLayoutEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     const t1 = gsap.timeline();
-  //     t1.from(
-  //       ["#acc", "#span1", "#span2", "#span3", "#para", "#more", "#spin-img"],
-  //       {
-  //         x: -5,
-  //         opacity: 0,
-
-  //         delay: 0.3,
-  //         stagger: 0.1,
-  //         ease: "expo.inOut",
-  //       }
-  //     )
-
-  //       .from(["#first-img", "#second-img", "#third-img"], {
-  //         opacity: 0,
-  //         scale: 0.8,
-  //         stagger: 1,
-  //       })
-  //       .from(["#rotate-arrow"], {
-  //         opacity: 0,
-  //         duration: 0.5,
-  //         rotate: 60,
-  //       })
-  //       .from(["#service-text"], {
-  //         opacity: 0,
-  //         duration: 0.8,
-  //         scale: 0.8,
-  //         ease: "expo.inOut",
-  //       });
-  //   }, comp);
-
-  //   return () => ctx.revert();
-  // }, []);
 
   useGSAP(
     () => {
@@ -156,9 +121,9 @@ const Landing = () => {
           <span className="px-4 py-2 max-w-fit rounded-full flex items-center bg-gray-200 text-gray-700">
             Accelerated Solutions
           </span>
-          <div className="h-[50px] w-[15px]    ">
+          {/* <div className="h-[50px] w-[15px]    ">
             <div className="h-full w-full relative left-[78px] top-[15px] z-50 rounded-bl-[30px] shadow-[0_15px_0px_0px_rgba(0,0,0,0.3)] shadow-[#fff]"></div>
-          </div>
+          </div> */}
         </div>
 
         <div className="xl:text-6xl lg:text-5xl md:text-4xl text-4xl relative z-10  font-bold xl:mb-4 my-8  ">
@@ -182,9 +147,9 @@ const Landing = () => {
               <div className="h-full w-full  rounded-tl-2xl shadow-[0_-13px_0px_0px_rgba(0,0,0,0.3)] shadow-[#fff]"></div>
             </div>
             <div>
-              <div className="h-[50px] w-[20px] absolute right-[153px] top-[76px] z-50 ">
+              {/* <div className="h-[50px] w-[20px] absolute right-[153px] top-[76px] z-50 ">
                 <div className="h-full w-full  rounded-tl-2xl shadow-[0_-13px_0px_0px_rgba(0,0,0,0.3)] shadow-white"></div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -198,10 +163,10 @@ const Landing = () => {
         <div className="xl:py-4 py-8 mt-8">
           <div
             id="more"
-            className="bg-[#234664] text-white rounded-full  pr-1 pl-4 py-1 flex gap-10 max-w-fit justify-between items-center"
+            className="bg-[#51BA80] text-white rounded-full  pr-1 pl-4 py-1 flex gap-10 max-w-fit justify-between items-center"
           >
             <p>More About Us</p>{" "}
-            <div id="moreIcon">
+            <a href="#about" className="cursor-pointer" id="moreIcon">
               <svg
                 className="bg-white px-2 rounded-full"
                 fill="#234664"
@@ -228,7 +193,7 @@ const Landing = () => {
                   ></path>{" "}
                 </g>
               </svg>
-            </div>
+            </a>
           </div>
         </div>
         {/* <div className="max-w-fit px-12">
@@ -250,7 +215,7 @@ const Landing = () => {
       </div>
       {/* right div  */}
       <div className="xl:flex hidden  rightDiv flex-col h-[102.5%] xl:flex-[0.45] flex-1 lg:flex-[0.7]   ">
-        <div className="w-full  flex px-5 xl:px-0 justify-between">
+        <div className="w-full  flex   justify-between">
           <div
             id="second-img"
             className=" rigntbelowTrigger overflow-hidden h-[150px]  w-[150px]  rounded-3xl"
@@ -261,14 +226,14 @@ const Landing = () => {
               alt=""
             />
           </div>
-          <div className="relative right-10  ">
+          <a href="#services" className="relative xl:right-4  ">
             <div
               id="rotate-arrow"
               className="h-[150px]  w-[150px] -rotate-45 rounded-full border-y-2 border-l-2 overflow-hidden"
             >
               <svg
                 className="bg-white w-full h-full px-12   border-black"
-                fill="#234664"
+                fill="#51BA80"
                 height="20px"
                 width="20px"
                 version="1.1"
@@ -295,11 +260,11 @@ const Landing = () => {
             </div>
             <p
               id="service-text"
-              className="text-gray-600 absolute top-5 -right-12 "
+              className="text-[#51BA80] absolute top-5 -right-12 "
             >
               Our Service
             </p>
-          </div>
+          </a>
         </div>
         <div
           id="third-img"

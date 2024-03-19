@@ -19,81 +19,78 @@ const About = () => {
   const [hover4, sethover4] = useState(false);
   const [hover, sethover] = useState(false);
 
-  useGSAP(
-    () => {
-      const t1 = gsap.timeline({
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          // markers: true,
-          scrub: 3,
+  useGSAP(() => {
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: aboutRef.current,
+        // markers: true,
+        scrub: 3,
 
-          start: "top 65%",
-          end: "top 20%",
-        },
-      });
-      const t2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          // markers: true,
-          scrub: 3,
+        start: "top 65%",
+        end: "top 20%",
+      },
+    });
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: aboutRef.current,
+        // markers: true,
+        scrub: 3,
 
-          start: "top 65%",
-          end: "top 20%",
-        },
-      });
-      const t3 = gsap.timeline({
-        scrollTrigger: {
-          trigger: boxRef.current,
-          // markers: true,
-          scrub: 3,
+        start: "top 65%",
+        end: "top 20%",
+      },
+    });
+    const t3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: boxRef.current,
+        // markers: true,
+        scrub: 2,
 
-          start: "top 75%",
-          end: "top 39%",
-        },
-      });
-      const t4 = gsap.timeline({
-        scrollTrigger: {
-          trigger: boxRef.current,
-          // markers: true,
-          scrub: 3,
+        start: "top 75%",
+        end: "top 39%",
+      },
+    });
+    // const t4 = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: boxRef.current,
+    //     // markers: true,
+    //     scrub: 3,
 
-          start: "top 75%",
-          end: "top 39%",
-        },
-      });
+    //     start: "top 75%",
+    //     end: "top 39%",
+    //   },
+    // });
 
-      t1.from(".paraText", {
-        opacity: 0,
-        y: "100px",
-        x: "-50px",
-        duration: 2,
+    t1.from(".paraText", {
+      opacity: 0,
+      y: "100px",
+      x: "-50px",
+      duration: 2,
 
-        stagger: 0.5,
+      stagger: 0.5,
 
-        // ease: "expo.inOut",
-      });
-      t2.from(".spanText", {
-        padding: "1vw",
-        fontSize: "20px",
+      // ease: "expo.inOut",
+    });
+    t2.from(".spanText", {
+      padding: "1vw",
+      fontSize: "20px",
 
-        opacity: 0,
+      opacity: 0,
 
-        // ease: "expo.inOut",
-      });
-      t3.from(
-        [".firstBox", ".secondBox", ".thirdBox", ".fourthBox"],
-        {
-          y: "150px",
-          stagger: 0.5,
-          // duration: 0.2,
-          scrub: 2,
-          ease: "back.inOut",
-        },
-        "boxes"
-      );
-    },
-    { scope: aboutRef }
-  );
+      // ease: "expo.inOut",
+    });
+    // t3.from(
+    //   [".firstBox", ".secondBox", ".thirdBox", ".fourthBox"],
+    //   {
+    //     x: 100,
+    //     // y: "-100px",
+    //     rotate: -15,
+    //     stagger: 0.5,
+    //     duration: 1,
+    //   },
+    //   "boxes"
+    // );
+  });
 
   useGSAP(() => {
     const t1 = gsap.timeline();
@@ -107,23 +104,31 @@ const About = () => {
     >
       <div className=" aboutText p-10  ">
         <h1 className="text-center text-sm text-[#48B9A2] mb-8 font-bold ">
-          {"Know who we are".split("").map((item) => {
-            return <span className="spanText">{item}</span>;
+          {"Know who we are".split("").map((item, id) => {
+            return (
+              <span id={id} className="spanText">
+                {item}
+              </span>
+            );
           })}
         </h1>
         <p className="  text-center text-xl text-[#234664]  xl:px-[20vw]">
           {" "}
-          {"We've got you covered with our efficient courier service.Ship your extra luggage hassle-free  and travel light!"
+          {"We provide a reliable courier service to give you peace of mind. Ship your extra luggage with ease and travel stress-free. Our efficient service ensures your items arrive safely and on time, allowing you to enjoy a hassle-free journey."
             .split("")
-            .map((item) => {
-              return <span className="paraText">{item}</span>;
+            .map((item, id) => {
+              return (
+                <span id={id} className="paraText">
+                  {item}
+                </span>
+              );
             })}
         </p>
       </div>
 
       <div
         ref={boxRef}
-        className={` flex   xl:h-[310px] w-full md:h-[500px]  xl:px-20 justify-center  flex-wrap gap-4 items-end `}
+        className={` flex  xl:mb-16  xl:h-[310px] w-full md:h-[500px]  xl:px-20 justify-center  flex-wrap gap-4 items-end `}
       >
         {/* first  */}
         <div
@@ -134,7 +139,7 @@ const About = () => {
             sethover1(false);
           }}
           id="hoverEl"
-          className=" firstBox relative flex overflow-hidden flex-col  group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
+          className=" firstBox box relative flex overflow-hidden flex-col  group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
         >
           <div className="z-20 flex flex-col h-full py-4 justify-between">
             <div className=" border rounded-full h-[50px] text-[#51BDA7] group-hover:text-white w-[50px] flex justify-center items-center group-hover:border-gray-100 border-gray-400">
@@ -146,15 +151,16 @@ const About = () => {
               Reliable
             </span>
             <p className="text-sm group-hover:w-[80%] text-gray-500 group-hover:text-gray-100  ">
-              Connecting people, businesses, and communities to a better future
+              Swift global logistics through efficient and reliable air freight
+              services.
             </p>
             <p
               id="hiddentext"
               className=" group-hover:block mt-8 group-hover:text-gray-300 text-sm  hidden  "
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-              consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
-              Iure, consectetur.
+              Our air freight services guarantee dependable and swift delivery,
+              ensuring your goods reach their destination safely and on time,
+              every time.
             </p>
           </div>
           <div className="absolute h-full w-full top-0 left-0 group-hover:bg-black group-hover:opacity-25 z-10 rounded-3xl"></div>
@@ -168,7 +174,7 @@ const About = () => {
             sethover2(false);
           }}
           id="hoverEl"
-          className=" secondBox relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
+          className=" secondBox box relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
         >
           <div className="z-20 flex flex-col h-full py-4 justify-between">
             <div className=" border rounded-full h-[50px] text-[#51BDA7] group-hover:text-white w-[50px] flex justify-center items-center group-hover:border-gray-100 border-gray-400">
@@ -177,18 +183,19 @@ const About = () => {
               <Icon className="h-full w-full p-2" icon="tabler:ship" />{" "}
             </div>
             <span className="text-sm group-hover:text-white text-[#4CB797] font-bold">
-              Reliable
+              Innovative
             </span>
             <p className="text-sm group-hover:w-[80%] text-gray-500 group-hover:text-gray-100  ">
-              Connecting people, businesses, and communities to a better future
+              Innovative ocean freight solutions for efficient global logistics
+              management.
             </p>
             <p
               id="hiddentext"
               className=" group-hover:block mt-8 group-hover:text-gray-300 text-sm  hidden  "
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-              consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
-              Iure, consectetur.
+              Our innovative ocean freight services set new benchmarks in global
+              shipping, offering unmatched efficiency and reliability for your
+              cargo transportation needs.
             </p>
           </div>
           <div className="absolute h-full w-full top-0 left-0 group-hover:bg-black group-hover:opacity-25 z-10 rounded-3xl"></div>
@@ -202,7 +209,7 @@ const About = () => {
             sethover3(false);
           }}
           id="hoverEl"
-          className=" thirdBox relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
+          className=" thirdBox box relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
         >
           <div className="z-20 flex flex-col h-full py-4 justify-between">
             <div className=" border rounded-full h-[50px] text-[#51BDA7] group-hover:text-white w-[50px] flex justify-center items-center group-hover:border-gray-100 border-gray-400">
@@ -211,18 +218,19 @@ const About = () => {
               <Icon className="h-full w-full p-2" icon="maki:warehouse" />
             </div>
             <span className="text-sm group-hover:text-white text-[#4CB797] font-bold">
-              Reliable
+              Sustainable
             </span>
             <p className="text-sm group-hover:w-[80%] text-gray-500 group-hover:text-gray-100  ">
-              Connecting people, businesses, and communities to a better future
+              Environmentally conscious warehousing for sustainable logistics
+              solutions.{" "}
             </p>
             <p
               id="hiddentext"
               className=" group-hover:block mt-8 group-hover:text-gray-300 text-sm  hidden  "
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-              consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
-              Iure, consectetur.
+              Our warehousing services emphasize sustainability, aiming to
+              contribute to a greener future by reducing environmental impact
+              and promoting eco-friendly practices
             </p>
           </div>
           <div className="absolute h-full w-full top-0 left-0 group-hover:bg-black group-hover:opacity-25 z-10 rounded-3xl"></div>
@@ -236,25 +244,26 @@ const About = () => {
             sethover4(false);
           }}
           id="hoverEl"
-          className=" fourthBox relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
+          className=" fourthBox box relative flex flex-col overflow-hidden group transition duration-300 ease-linear  gap-4 p-3 w-[250px] h-[200px] border border-gray-500  linear rounded-3xl  "
         >
           <div className="z-20 flex flex-col h-full py-4 justify-between">
             <div className=" border rounded-full h-[50px] text-[#51BDA7] group-hover:text-white w-[50px] flex justify-center items-center group-hover:border-gray-100 border-gray-400">
               <Icon className="h-full w-full p-2" icon="ph:truck" />
             </div>
             <span className="text-sm group-hover:text-white text-[#4CB797] font-bold">
-              Reliable
+              Flexible
             </span>
             <p className="text-sm group-hover:w-[80%] text-gray-500 group-hover:text-gray-100  ">
-              Connecting people, businesses, and communities to a better future
+              Flexible road freight solutions for dynamic logistics needs
+              worldwide{" "}
             </p>
             <p
               id="hiddentext"
               className=" group-hover:block mt-8 group-hover:text-gray-300 text-sm  hidden  "
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
-              consectetur.adipisicing elit. Iure, consectetur.adipisicing elit.
-              Iure, consectetur.
+              Our road freight services are designed to be flexible, ensuring
+              they can adapt to meet the unique and changing transportation
+              needs of our clients.
             </p>
           </div>
           <div className="absolute h-full w-full top-0 left-0 group-hover:bg-black group-hover:opacity-25 z-10 rounded-3xl"></div>

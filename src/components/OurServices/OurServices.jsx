@@ -38,8 +38,17 @@ const OurServices = () => {
   );
 
   return (
-    <div ref={services} id="services" className="my-24  ">
-      <p className="text-center my-16 text-4xl font-bold">Our Services</p>
+    <div ref={services} id="services" className="mt-24  ">
+      <p className="text-center mt-16 text-xs mb-8 text-[#40B69E] font-bold">
+        Our Services
+      </p>
+      <div className="flex justify-center">
+        <p className=" text-center px-10 md:px-20 mb-16 py-2 md:w-[70%] text-xl md:text-3xl text-[#234664]  ">
+          Reliable courier services for hassle-free shipping br and on-time
+          delivery, ensuring peace of mind.
+        </p>
+      </div>
+
       <div className="flex  justify-center flex-wrap gap-4  px-20   ">
         {/* {servicesData.map((item) => {
           return (

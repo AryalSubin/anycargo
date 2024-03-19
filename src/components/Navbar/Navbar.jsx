@@ -4,6 +4,7 @@ import logo from "../../assets/logo1.png";
 import logo_text from "../../assets/logo_text.jpg";
 import logo_text1 from "../../assets/logo_text1.png";
 import { useGSAP } from "@gsap/react";
+import { Icon } from "@iconify/react";
 
 const Navbar = () => {
   // const [prevYPosition, setPreviousYPosition] = useState(0);
@@ -101,9 +102,9 @@ const Navbar = () => {
       } `}
     >
       {/* <div id="nav"> */}
-      <div id="logo" className="flex object-cover p-2 overflow-hidden ">
+      <a href="/" id="logo" className="flex object-cover p-2 overflow-hidden ">
         <img className="h-[50px]" src={logo_text1} alt="logo" />
-      </div>
+      </a>
       <div className=" flex-1 hidden md:flex text-sm md:text-base justify-center items-center  gap-[3vw]">
         {navData.map((item, id) => {
           return (
@@ -119,7 +120,9 @@ const Navbar = () => {
         })}
       </div>
       <div className="flex items-center">
-        <div
+        <a
+          href="https://wa.me/9865008015"
+          target="_blank"
           id="btn"
           className="border border-[#26D366] hidden md:block tracking-wide   px-6 py-2 rounded-3xl "
         >
@@ -158,7 +161,7 @@ const Navbar = () => {
             </svg>
           </div> */}
           WhatsApp Now
-        </div>
+        </a>
       </div>
       {/* hamburger  */}
       {showHam ? (
@@ -168,7 +171,10 @@ const Navbar = () => {
           }}
           className="md:hidden  transition duration-200"
         >
-          <svg
+          <div className="">
+            <Icon icon="ci:hamburger-md" />
+          </div>
+          {/* <svg
             width="64px"
             height="64px"
             viewBox="0 0 72 72"
@@ -226,7 +232,7 @@ const Navbar = () => {
                 ></line>{" "}
               </g>{" "}
             </g>
-          </svg>
+          </svg> */}
         </div>
       ) : (
         <div

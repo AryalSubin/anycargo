@@ -1,127 +1,147 @@
 import React from "react";
 import bgImage from "../../assets/contactUs/bg-image.png";
 import contact_cargo from "../../assets/contactUs/contact_cargo.jpg";
+import { Icon } from "@iconify/react";
 
 const ContactUs = () => {
   return (
-    <div
-      id="contact"
-      style={{
-        backgroundColor: "white",
-      }}
-      className="  flex px-20 gap-8 py-16  "
-    >
-      <div className="flex flex-col flex-1 text-sm text-gray-400 h-[400px] p-4 gap-8 rounded-3xl bg-white border border-gray-400 ">
-        <h1 className="text-xl text-black font-semibold">Personal Data</h1>
-        <div className="flex justify-between gap-8">
-          <div className="flex w-full flex-col">
-            <label htmlFor="name">First Name</label>
-            <input
-              className="p-2  border border-gray-500 rounded-md"
-              type="text"
-              placeholder="Your first name*"
-            />
-          </div>
-          <div className="flex w-full flex-col">
-            <label htmlFor="name">Last Name</label>
-            <input
-              className="p-2 border border-gray-500 rounded-md"
-              type="text"
-              placeholder="Your last name*"
-            />
-          </div>
-        </div>
-        <div className="flex justify-between gap-8">
-          <div className="flex w-full flex-col">
-            <label htmlFor="name">Phone</label>
-            <input
-              className="p-2  border border-gray-500 rounded-md"
-              type="tel"
-              placeholder="Phone*"
-            />
-          </div>
-          <div className="flex w-full flex-col">
-            <label htmlFor="name">Email</label>
-            <input
-              className="p-2 border border-gray-500 rounded-md"
-              type="email"
-              placeholder="Your email*"
-            />
-          </div>
-        </div>
-        <div className="flex justify-between gap-8">
-          <div className="flex w-full flex-col">
-            <label htmlFor="name">Phone</label>
-            <input
-              className="p-2  border border-gray-500 rounded-md"
-              type="tel"
-              placeholder="Phone*"
-            />
-          </div>
-          <div className="flex w-full flex-col">
-            <label htmlFor="services">Services</label>
-            <select
-              className="p-2  border border-gray-500 rounded-md"
-              name="services"
-              id="services"
-            >
-              {servicesData.map((service) => (
-                <option value={service} key={service.id}>
-                  {service.text}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+    <div>
+      <div className="flex justify-center ">
+        <p className="text-[#47B9A1]">Contact Us</p>
       </div>
       <div
+        id="contact"
         style={{
-          backgroundImage: `url(${contact_cargo})`,
+          backgroundColor: "white",
         }}
-        className="flex flex-col justify-between gap-12 py-2 flex-[0.5] bg-cover h-[400px] box-border text-left text-white rounded-3xl w-full  "
+        className="  lg:flex md:px-20 px-12  gap-8 py-16  "
       >
-        <div className="">
-          <h1 className="text-xl  px-4">company details</h1>
-          <p className="text-left text-gray-300 text-xs mt-4 px-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro qui
-            sit eveniet illo odio quae repudiandae ex corporis error voluptatum,
-            veritatis eos reprehenderit velit consequatur! Quidem repellat nam
-            reprehenderit ullam.
-          </p>
-        </div>
-        {/* socials  */}
-        <div className="flex justify-center gap-2 mt-4">
-          <div className="p-2 border cursor-pointer border-gray-500 bg-white rounded-full">
-            <svg
-              fill="#000000"
-              height="30px"
-              width="30px"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 310 310"
-              xml:space="preserve"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <g id="XMLID_834_">
-                  {" "}
-                  <path
-                    id="XMLID_835_"
-                    d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064 c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996 V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545 C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703 c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"
-                  ></path>{" "}
-                </g>{" "}
-              </g>
-            </svg>
+        <div className="flex flex-col flex-1 text-sm text-gray-400  py-8 md:px-16 px-4 gap-8 rounded-3xl bg-white border border-gray-400 ">
+          <h1 className="text-xl text-black font-semibold">Personal Data</h1>
+          <div className="md:flex justify-between gap-8 ">
+            <div className="flex w-full gap-2 flex-col">
+              <label htmlFor="name">First Name</label>
+              <input
+                className="py-3 px-4  border min-w-[200px] border-gray-300 focus:outline-[#51BA80]   rounded-full"
+                type="text"
+                placeholder="Your first name*"
+              />
+            </div>
+            <div className="flex gap-2 pt-4 md:pt-0 w-full flex-col">
+              <label htmlFor="name">Last Name</label>
+              <input
+                className="py-3 px-4 border min-w-[200px] border-gray-300 focus:outline-[#51BA80]   rounded-full"
+                type="text"
+                placeholder="Your last name*"
+              />
+            </div>
           </div>
-          <div className="p-2 border cursor-pointer border-gray-500 bg-white rounded-full">
+          <div className="md:flex  justify-between gap-8">
+            <div className="flex gap-2 w-full flex-col">
+              <label htmlFor="name">Phone</label>
+              <input
+                className="py-3 px-4  border min-w-[200px] border-gray-300 focus:outline-[#51BA80]   rounded-full"
+                type="tel"
+                placeholder="Phone*"
+              />
+            </div>
+            <div className="flex gap-2 pt-4 md:pt-0  w-full flex-col">
+              <label htmlFor="name">Email</label>
+              <input
+                className="py-3 px-4 border min-w-[200px] border-gray-300 focus:outline-[#51BA80]   rounded-full"
+                type="email"
+                placeholder="Your email*"
+              />
+            </div>
+          </div>
+          <div className="lg:flex justify-between gap-8">
+            <div className="flex w-full gap-2 flex-1 flex-col">
+              <label htmlFor="name">Address</label>
+              <input
+                className="py-3 px-4 min-w-[200px] border border-gray-300 focus:outline-[#51BA80]   rounded-full"
+                type="address"
+                placeholder="Address*"
+              />
+            </div>
+            <div className="flex overflow-hidden gap-2 pt-4 md:pt-0  flex-1 flex-col">
+              <label htmlFor="services">Services</label>
+              <select
+                className="py-3 px-4 min-w-[200px] border border-gray-300 focus:outline-[#51BA80]   rounded-full"
+                name="services"
+                id="services"
+              >
+                {servicesData.map((service) => (
+                  <option value={service} key={service.id}>
+                    <p>{service.text}</p>
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+          <div className="flex justify-end">
+            <a
+              href="/"
+              className="py-4 px-8 bg-[#51BA80] cursor-pointer text-white rounded-full"
+            >
+              send a message
+            </a>
+          </div>
+        </div>
+        <div
+          style={{
+            backgroundImage: `url(${contact_cargo})`,
+          }}
+          className="flex mt-8 md:mt-0 z-20 flex-col justify-between gap-12 py-2 flex-[0.5] bg-cover  box-border text-left text-white rounded-3xl w-full  "
+        >
+          <div className="flex flex-col gap-4 py-4">
+            <h1 className="text-xl  px-4">company details</h1>
+            <p className="text-left text-gray-300 text-xs  px-4">
+              Infinity Logistics offers top-tier air, road, ocean, and
+              warehousing services globally. With innovative solutions, they
+              provide tailored transportation for businesses, ensuring reliable
+              air freight, road transport, ocean shipping, and secure
+              warehousing. Known for excellence and customer satisfaction,
+              Infinity Logistics is a trusted logistics partner.
+            </p>
+          </div>
+          {/* socials  */}
+          <div className="flex justify-center ">
+            <a
+              target="_blank"
+              href="https://twitter.com/"
+              className="  h-[40px] w-[40px] rounded-full  p-1"
+            >
+              <Icon
+                className=" h-full w-full "
+                icon="fa6-brands:square-x-twitter"
+              />
+              {/* <Icon icon="fa6-brands:square-x-twitter" /> */}
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/infinitylogisticsnepal/"
+              className="  h-[40px] w-[40px] rounded-full  p-1"
+            >
+              <Icon className=" h-full w-full " icon="mage:facebook-square" />
+            </a>
+            <a
+              href="https://www.whatsapp.com/"
+              target="_blank"
+              className="  h-[40px] w-[40px] rounded-full  p-1"
+            >
+              <Icon className=" h-full w-full " icon="uim:whatsapp" />
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              className="  h-[40px] w-[40px] rounded-full  p-1"
+            >
+              <Icon
+                className=" h-full w-full "
+                icon="icon-park-outline:instagram"
+              />
+            </a>
+            {/* <div className="p-2 border cursor-pointer border-gray-500 bg-white rounded-full">
             <svg
               width="30px"
               height="30px"
@@ -196,6 +216,7 @@ const ContactUs = () => {
             >
               <path d="M 11 4 C 7.1456661 4 4 7.1456661 4 11 L 4 39 C 4 42.854334 7.1456661 46 11 46 L 39 46 C 42.854334 46 46 42.854334 46 39 L 46 11 C 46 7.1456661 42.854334 4 39 4 L 11 4 z M 11 6 L 39 6 C 41.773666 6 44 8.2263339 44 11 L 44 39 C 44 41.773666 41.773666 44 39 44 L 11 44 C 8.2263339 44 6 41.773666 6 39 L 6 11 C 6 8.2263339 8.2263339 6 11 6 z M 13.085938 13 L 22.308594 26.103516 L 13 37 L 15.5 37 L 23.4375 27.707031 L 29.976562 37 L 37.914062 37 L 27.789062 22.613281 L 36 13 L 33.5 13 L 26.660156 21.009766 L 21.023438 13 L 13.085938 13 z M 16.914062 15 L 19.978516 15 L 34.085938 35 L 31.021484 35 L 16.914062 15 z"></path>
             </svg>
+          </div> */}
           </div>
         </div>
       </div>
